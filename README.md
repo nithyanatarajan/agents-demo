@@ -31,7 +31,7 @@ uv pip sync requirements.lock
 
 ```shell
 playwright install
-python src/agents/main.py
+python smart_runner/agents/main.py
 ```
 
 ## Contribution
