@@ -1,6 +1,6 @@
 import asyncio
 
-from gpt_agent import get_agent_for
+from ollama_agent import get_agent_for
 
 
 async def main():
