@@ -4,3 +4,6 @@ ruff
 taskipy
 tomli
 browser-use
+langchain-openai
+langchain-google-genai
+langchain-ollama
