@@ -1,0 +1,62 @@
+# ----------------------------------------
+# Project Metadata
+# ----------------------------------------
+[project]
+name = "agents_demo"
+version = "0.1.0"
+description = "A Python project to demonstrate Agentic AI features"
+requires-python = ">=3.13"
+
+# ----------------------------------------
+# Ruff Configuration (Linting & Formatting)
+# ----------------------------------------
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+fix = true  # Auto-fix issues
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "E", # Pycodestyle errors
+    "F", # Pyflakes (detects unused imports, undefined variables)
+    "I", # isort (order imports)
+    "B", # Bugbear (security/performance issues)
+    "UP", # pyupgrade (suggests modern Python syntax)
+    "PL", # pylint rules
+    "T20", # print statements detection
+    "RUF" # Ruff-specific rules
+]
+ignore = []  # Ignore missing docstrings
+
+[tool.ruff.lint.isort]
+force-single-line = false
+lines-between-types = 1
+combine-as-imports = true
+
+# ----------------------------------------
+# Mypy Configuration (Static Type Checking)
+# ----------------------------------------
+[tool.mypy]
+python_version = "3.13"
+strict = true  # Enforce strict type checking
+ignore_missing_imports = true  # Ignore missing type hints for third-party libraries
+warn_unused_ignores = true  # Warn if a `# type: ignore` is unnecessary
+warn_return_any = true  # Warn if a function implicitly returns `Any`
+warn_unused_configs = true  # Warn about unused configuration options
+disallow_untyped_defs = true  # Prevent functions without type hints
+
+# ----------------------------------------
+# Taskipy Configuration (Task Runner)
+# ----------------------------------------
+[tool.taskipy.tasks]
+venv = "uv venv  --allow-existing"
+install = "uv pip sync requirements.lock"
+lint = "ruff check . --fix"
+typecheck = "mypy ."
+test = "pytest"
+format = "ruff format ."
+precommit = "ruff check . --fix && mypy ."
