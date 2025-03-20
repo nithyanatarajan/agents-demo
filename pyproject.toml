@@ -44,3 +44,4 @@ combine-as-imports = true
 install = "uv pip sync requirements.lock"
 lint = "ruff check . --fix"
 format = "ruff format ."
+run = "python -m smart_runner.ui.main"

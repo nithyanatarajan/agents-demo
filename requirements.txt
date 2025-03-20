@@ -7,3 +7,4 @@ browser-use
 langchain-openai
 langchain-google-genai
 langchain-ollama
+gradio

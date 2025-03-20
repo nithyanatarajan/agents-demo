@@ -9,6 +9,7 @@ interacting with environments, making autonomous decisions, and learning over ti
 
 1. Install [uv](https://github.com/astral-sh/uv)
 2. Install [direnv](https://github.com/direnv/direnv)
+3. Install [playwright](https://github.com/microsoft/playwright)
 
 ## Setup
 
@@ -25,13 +26,16 @@ source .venv/bin/activate
 uv pip sync requirements.lock
 ```
 
+```shell
+playwright install
+```
+
 ## Running the Project
 
 ### 1. [Demo] Add a product to amazon cart
 
 ```shell
-playwright install
-python smart_runner/agents/main.py
+task run
 ```
 
 ## Contribution
