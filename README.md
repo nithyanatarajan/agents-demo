@@ -31,7 +31,7 @@ uv pip sync requirements.lock
 
 ```shell
 playwright install
-python sample/main.py
+python src/agents/main.py
 ```
 
 ## Contribution
