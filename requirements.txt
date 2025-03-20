@@ -1,5 +1,4 @@
 colorama
-mypy
 psutil
 ruff
 taskipy

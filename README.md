@@ -48,12 +48,6 @@ uv pip freeze > requirements.lock
 task lint
 ```
 
-### Type Checking
-
-```shell
-task typecheck
-```
-
 ### Running Tests
 
 ```shell

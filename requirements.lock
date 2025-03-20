@@ -24,8 +24,6 @@ langchain-openai==0.3.1
 langsmith==0.3.18
 markdownify==0.14.1
 monotonic==1.6
-mypy==1.15.0
-mypy-extensions==1.0.0
 ollama==0.4.7
 openai==1.67.0
 orjson==3.10.15
