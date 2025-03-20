@@ -41,8 +41,6 @@ combine-as-imports = true
 # Taskipy Configuration (Task Runner)
 # ----------------------------------------
 [tool.taskipy.tasks]
-venv = "uv venv  --allow-existing"
 install = "uv pip sync requirements.lock"
 lint = "ruff check . --fix"
-test = "pytest"
 format = "ruff format ."

@@ -10,7 +10,7 @@ interacting with environments, making autonomous decisions, and learning over ti
 1. Install [uv](https://github.com/astral-sh/uv)
 2. Install [direnv](https://github.com/direnv/direnv)
 
-## Initial Setup
+## Setup
 
 ### Virtual Environment Setup
 
@@ -21,11 +21,26 @@ source .venv/bin/activate
 
 ### Install Dependencies
 
-> Use `requirements.lock` for a reproducible environment.
-> Use `requirements.txt` for latest compatible versions.
-
 ```shell
 uv pip sync requirements.lock
+```
+
+## Running the Project
+
+### 1. [Demo] Add a product to amazon cart
+
+```shell
+playwright install
+python sample/main.py
+```
+
+## Contribution
+
+### Add a new dependency
+
+```shell
+uv pip install <package-name>
+uv pip freeze > requirements.lock
 ```
 
 ### Update Dependencies
@@ -35,37 +50,20 @@ uv pip install --upgrade -r requirements.txt
 uv pip freeze > requirements.lock
 ```
 
-### Add a new dependency
+### Format
 
 ```shell
-uv pip install <package-name>
-uv pip freeze > requirements.lock
+task format
 ```
 
-### Linting & Formatting
+### Lint
 
 ```shell
 task lint
-```
-
-### Running Tests
-
-```shell
-task test
 ```
 
 ### List All Tasks
 
 ```shell
 task --list
-```
-
-
-## Running the Project
-
-### 1. [Demo] Add a product to amazon cart
-
-```shell
-playwright install
-python sample/main.py
 ```
