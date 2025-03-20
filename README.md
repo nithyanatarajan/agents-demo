@@ -35,25 +35,11 @@ uv pip install --upgrade -r requirements.txt
 uv pip freeze > requirements.lock
 ```
 
-### To add a new dependency
+### Add a new dependency
 
 ```shell
 uv pip install <package-name>
 uv pip freeze > requirements.lock
-```
-
-## Running the Project
-
-### Activate Virtual Environment
-
-```shell
-task venv
-```
-
-### Install/Update Dependencies
-
-```shell
-task install
 ```
 
 ### Linting & Formatting
@@ -78,4 +64,14 @@ task test
 
 ```shell
 task --list
+```
+
+
+## Running the Project
+
+### 1. [Demo] Add a product to amazon cart
+
+```shell
+playwright install
+python sample/main.py
 ```

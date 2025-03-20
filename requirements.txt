@@ -4,3 +4,4 @@ psutil
 ruff
 taskipy
 tomli
+browser-use

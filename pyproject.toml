@@ -48,6 +48,7 @@ warn_unused_ignores = true  # Warn if a `# type: ignore` is unnecessary
 warn_return_any = true  # Warn if a function implicitly returns `Any`
 warn_unused_configs = true  # Warn about unused configuration options
 disallow_untyped_defs = true  # Prevent functions without type hints
+exclude = ["^dist/", "^build/", "^__pycache__/"]
 
 # ----------------------------------------
 # Taskipy Configuration (Task Runner)
