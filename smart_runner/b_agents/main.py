@@ -4,7 +4,7 @@ from ollama_agent import get_agent_for
 
 
 async def main():
-    # task = 'Compare the price of gpt-4o and DeepSeek-V3'
+    # task = "Order a laptop that has 4.5 stars rating" #This will not work!
     task = 'Open amazon.in and add a product to cart'
     agent = get_agent_for(task)
     result = await agent.run()
