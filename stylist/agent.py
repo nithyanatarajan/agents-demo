@@ -26,13 +26,13 @@ async def run_task(
         message = f'Getting agent for task: {task}, provider: {provider}, model: {model}'
         logger.info(message)
 
-        result = ''
+        result = 'No Image Generated!'
         stylist_agent.print_response(task)
 
         images = stylist_agent.get_images()
         if images and isinstance(images, list):
             for image_response in images:
-                result = image_response
+                result = image_response.url
 
         return result
     except Exception as e:
