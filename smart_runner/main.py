@@ -2,8 +2,8 @@ import asyncio
 
 import gradio as gr
 
-from smart_runner.config import MODELS, PROVIDERS
-from smart_runner.ui.browser_agent import run_browser_task
+from config import MODELS, PROVIDERS
+from smart_runner.browser_agent import run_browser_task
 
 
 def update_models_for(provider):

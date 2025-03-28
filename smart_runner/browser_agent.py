@@ -1,5 +1,5 @@
-from smart_runner.b_agents import google_agent, gpt_agent, ollama_agent
-from smart_runner.config import get_logger
+from config import get_logger
+from smart_runner.agents import google_agent, gpt_agent, ollama_agent
 
 logger = get_logger(__name__)
 

@@ -44,5 +44,5 @@ combine-as-imports = true
 install = "uv pip sync requirements.lock"
 lint = "ruff check . --fix"
 format = "ruff format ."
-run = "python -m smart_runner.ui.main"
-runa = "python -m smart_runner.a_agents.main"
+runsr = "python -m smart_runner.main"
+runta = "python -m task_based_agent.main"

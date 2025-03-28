@@ -32,10 +32,23 @@ playwright install
 
 ## Running the Project
 
-### 1. [Demo] Add a product to amazon cart
+### 1. [Demo1] Browser-use + langchain + gradio example
+
+Prompt examples:
+1. Find trains from Chennai to Madurai today
+2. Add dove shampoo to Amazon cart
 
 ```shell
-task run
+task runsr
+```
+
+### 2. [Demo2] Agno agent example with news reporter 
+
+Prompt examples:
+1. Tell me about the weather in Chennai
+
+```shell
+task runta Tell me about the weather in Chennai
 ```
 
 ## Contribution
