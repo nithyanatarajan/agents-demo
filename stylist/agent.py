@@ -4,38 +4,24 @@ from agno.agent import Agent
 from agno.tools.dalle import DalleTools
 
 from config import get_logger
-from task_based_agent import google_agent, gpt_agent, ollama_agent
+from task_based_agent import agent
 
 logger = get_logger(__name__)
 
 
-def get_model_for(task: str, provider: str = 'OpenAI', model: str = 'gpt-4o'):
-    message = f'Getting agent for task: {task}, provider: {provider}, model: {model}'
-    logger.info(message)
-
-    if provider == 'OpenAI':
-        model = gpt_agent.get_model(model)
-    elif provider == 'Google':
-        model = google_agent.get_model(model)
-    else:
-        model = ollama_agent.get_model(model)
-
-    return model
-
-
 async def run_task(
-        task: str = 'Smart-casual for rainy day office',
-        provider: str = 'OpenAI',
-        model: str = 'gpt-4o',
+    task: str = 'Smart-casual for rainy day office',
+    provider: str = 'OpenAI',
+    model: str = 'gpt-4o',
 ) -> str:
     try:
         stylist_agent = Agent(
-            model=get_model_for(task, provider, model),
+            model=agent.get_model_for(provider, model),
             tools=[DalleTools()],
             description="You're a fashion stylist AI that suggests outfit visuals "
-                        'based on user needs.',
+            'based on user needs.',
             instructions='Generate a stylish outfit image based on '
-                         'the given description using DALL·E.',
+            'the given description using DALL·E.',
             markdown=True,
             show_tool_calls=True,
         )
