@@ -4,13 +4,9 @@ from smart_runner.agents import google_agent, gpt_agent, ollama_agent
 logger = get_logger(__name__)
 
 
-async def run_browser_task(
-    task: str, provider: str = 'OpenAI', model: str = 'gpt-4o'
-) -> str:
+async def run_browser_task(task: str, provider: str = 'OpenAI', model: str = 'gpt-4o') -> str:
     try:
-        message = (
-            f'Getting agent for task: {task}, provider: {provider}, model: {model}'
-        )
+        message = f'Getting agent for task: {task}, provider: {provider}, model: {model}'
         logger.info(message)
 
         if provider == 'OpenAI':

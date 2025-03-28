@@ -24,8 +24,7 @@ def create_ui():
             with gr.Column():
                 task = gr.Textbox(
                     label='Task Description',
-                    placeholder='E.g., Find flights from New York to London '
-                    'for next week',
+                    placeholder='E.g., Find flights from New York to London for next week',
                     lines=3,
                 )
                 provider = gr.Dropdown(

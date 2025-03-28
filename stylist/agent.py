@@ -18,16 +18,12 @@ async def run_task(
         stylist_agent = Agent(
             model=agent.get_model_for(provider, model),
             tools=[DalleTools()],
-            description="You're a fashion stylist AI that suggests outfit visuals "
-            'based on user needs.',
-            instructions='Generate a stylish outfit image based on '
-            'the given description using DALL·E.',
+            description="You're a fashion stylist AI that suggests outfit visuals based on user needs.",
+            instructions='Generate a stylish outfit image based on the given description using DALL·E.',
             markdown=True,
             show_tool_calls=True,
         )
-        message = (
-            f'Getting agent for task: {task}, provider: {provider}, model: {model}'
-        )
+        message = f'Getting agent for task: {task}, provider: {provider}, model: {model}'
         logger.info(message)
 
         result = ''
