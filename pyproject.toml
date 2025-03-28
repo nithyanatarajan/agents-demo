@@ -11,7 +11,7 @@ requires-python = ">=3.13"
 # Ruff Configuration (Linting & Formatting)
 # ----------------------------------------
 [tool.ruff]
-line-length = 88
+line-length = 120
 target-version = "py313"
 fix = true  # Auto-fix issues
 
@@ -46,4 +46,5 @@ lint = "ruff check . --fix"
 format = "ruff format ."
 runsr = "python -m smart_runner.main"
 runta = "python -m task_based_agent.main"
-runvi = "python -m stylist.main"
+runst = "python -m stylist.main"
+runvi = "python -m viberobeai.main"

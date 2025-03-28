@@ -57,6 +57,16 @@ Prompt examples:
 1. Smart-casual for office rainy day
 
 ```shell
+task runst
+```
+
+
+### 4. [Demo4] VibeRobe.ai
+
+Prompt examples:
+What should I wear for a rooftop dinner in Bangalore?
+
+```shell
 task runvi
 ```
 
