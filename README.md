@@ -50,7 +50,7 @@ uv pip freeze > requirements.lock
 ### Update Dependencies
 
 ```shell
-uv pip install --upgrade -r requirements.txt
+uv pip install --upgrade -r requirements.lock
 uv pip freeze > requirements.lock
 ```
 
