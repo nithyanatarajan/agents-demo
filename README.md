@@ -51,6 +51,15 @@ Prompt examples:
 task runta Tell me about the weather in Chennai
 ```
 
+### 3. [Demo3] Stylist with image generation from DALL-E
+
+Prompt examples:
+1. Smart-casual for office rainy day
+
+```shell
+task runvi
+```
+
 ## Contribution
 
 ### Add a new dependency
