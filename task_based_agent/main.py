@@ -1,8 +1,10 @@
 import asyncio
 import sys
 
+from agno.agent import Agent
+
 from config import get_logger
-from task_based_agent.ollama_agent import get_agent_with
+from task_based_agent.ollama_agent import get_model
 
 logger = get_logger(__name__)
 
@@ -14,7 +16,8 @@ async def main():
     task = task_from_cli if len(task_from_cli) > 1 else task
     logger.info(f'Task given to agent: {task}')
     description = 'You are an enthusiastic news reporter with a flair for storytelling!'
-    agent = get_agent_with(description)
+    agent = Agent(model=(get_model()), description=description, markdown=True)
+
     agent.print_response(task, stream=True)
 
 
