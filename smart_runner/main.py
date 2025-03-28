@@ -23,7 +23,7 @@ def create_ui():
         with gr.Row():
             with gr.Column():
                 task = gr.Textbox(
-                    label='Task Description',
+                    label='Task Description (e.g., Add women shoes size 7 to Amazon.in cart)',
                     placeholder='E.g., Find flights from New York to London for next week',
                     lines=3,
                 )
